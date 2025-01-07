@@ -161,7 +161,7 @@ function App() {
             </a>
 
             <TunerButton 
-              href="https://github.com/Johnjaguar/Tuner.git"
+              href="https://johnjaguar.github.io/Tuner/"
               onClick={() => {
                 console.log('Tuner button clicked');
               }} 
