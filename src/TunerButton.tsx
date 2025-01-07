@@ -3,10 +3,15 @@ import { Music } from 'lucide-react';
 
 interface TunerButtonProps {
   href?: string;
+  onClick?: () => void;  // Add this line
 }
 
-const TunerButton: React.FC<TunerButtonProps> = ({ href = "https://johnjaguar.github.io/Tuner/" }) => {
+const TunerButton: React.FC<TunerButtonProps> = ({ 
+  href = "https://johnjaguar.github.io/Tuner/",
+  onClick 
+}) => {
   const handleClick = () => {
+    if (onClick) onClick();  // Call the passed onClick handler if it exists
     if (href) {
       window.open(href, '_blank');
     }
